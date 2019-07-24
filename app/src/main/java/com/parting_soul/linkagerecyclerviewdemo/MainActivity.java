@@ -214,8 +214,9 @@ public class MainActivity extends AppCompatActivity {
         int firstVisiblePosition = manager.findFirstVisibleItemPosition();
         RightBean bean = mRightAdapter.getItem(firstVisiblePosition);
         if (bean != null) {
-            mLeftAdapter.setSelectPosition(findLeftItemPositionBySortName(bean.getGroupName()));
-            mRvLeft.smoothScrollToPosition(firstVisiblePosition);
+            int leftSelectPos = findLeftItemPositionBySortName(bean.getGroupName());
+            mLeftAdapter.setSelectPosition(leftSelectPos);
+            mRvLeft.smoothScrollToPosition(leftSelectPos);
             if (isChangeGroup(firstVisiblePosition)) {
                 mTvTitle.setText(bean.getGroupName());
             }
