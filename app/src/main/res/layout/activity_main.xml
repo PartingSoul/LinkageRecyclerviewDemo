@@ -6,6 +6,11 @@
     android:orientation="horizontal"
     android:weightSum="4">
 
+    <TextView
+        android:id="@+id/tv_txt"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content" />
+
     <android.support.v7.widget.RecyclerView
         android:id="@+id/mRvLeft"
         android:layout_width="0dp"
