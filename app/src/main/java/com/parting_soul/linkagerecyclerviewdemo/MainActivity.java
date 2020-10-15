@@ -69,9 +69,6 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         mUnbinder = ButterKnife.bind(this);
 
-        TextView tv = findViewById(R.id.tv_txt);
-        tv.setText(BuildConfig.HOST);
-
         mDataTask = new DataTask();
         mDataTask.execute();
 
